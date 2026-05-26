@@ -103,24 +103,8 @@ if S.PhysicsService then
     pcall(function()
         -- Modern API
         local groups = {}
-        local ok2, gr = pcall(function() return S.PhysicsService:GetRegisteredPhysicsGroups() end)
-        if ok2 then groups = gr end
-        if #groups == 0 then
-            -- Try deprecated API
-            ok2, gr = pcall(function()
-                local list = {}
-                for i = 0, 31 do
-                    local gok, name = pcall(function()
-                        return S.PhysicsService:GetCollisionGroupName(i)
-                    end)
-                    if gok and name and name ~= "" then
-                        table.insert(list, {Name=name, Id=i})
-                    end
-                end
-                return list
-            end)
-            if ok2 then groups = gr end
-        end
+        local ok2, gr = pcall(function() return S.PhysicsService:GetRegisteredCollisionGroups() end)
+        if ok2 and type(gr) == "table" then groups = gr end
         U.S_Push(string.format("  Total collision groups: %d", #groups))
         for _, g in ipairs(groups) do
             pcall(function()

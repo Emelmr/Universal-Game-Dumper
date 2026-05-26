@@ -224,7 +224,6 @@ pcall(function()
     end
 end)
 
-U.Utils and U.Utils.Log and U.Utils.Log("D_Player done", "DUMP")
 U.Log("D_Player done", "DUMP")
 
 return true

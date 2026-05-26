@@ -44,7 +44,7 @@ S.Workspace.ChildAdded:Connect(function(child)
         end
 
         -- If it's a part with very high velocity (projectile?)
-        if child:IsA and child:IsA("BasePart") then
+        if typeof(child) == "Instance" and child:IsA("BasePart") then
             local vel = U.SafeGet(child, "Velocity")
             if vel and vel.Magnitude > 50 then
                 U.LogRT("PROJECTILE?", U.GetPath(child),
