@@ -12,7 +12,7 @@ local GITHUB_BRANCH = "main"
 
 -- Set to TRUE to download modules from GitHub.
 -- Set to FALSE if you want to load from your executor's local workspace.
-local USE_GITHUB = true 
+local USE_GITHUB = false 
 
 local BASE_PATH = "hune-log/"
 
