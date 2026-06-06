@@ -6,7 +6,7 @@
 
 -- ── CONFIGURATION ─────────────────────────────────────────────
 -- Change these to match your GitHub repository!
-local GITHUB_USER = "Konmeo22132-alt"
+local GITHUB_USER = "Emelmr"
 local GITHUB_REPO = "Universal-Game-Dumper"
 local GITHUB_BRANCH = "main"
 
